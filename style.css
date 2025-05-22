@@ -298,6 +298,10 @@ section {
     bottom: 2.5rem;
 }
 
+.text-container {
+    text-align: left;
+}
+
 .details-container {
     padding: 1.5rem;
     flex: 1;
