@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diseño de Producto - Post Human Interactive</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body style="background-color: #121113">
+    <nav id="desktop-nav">
+      <div class="logo"><img src="./assets/logotipo.png" alt="Logotipo" /></div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="index.html#about">Sobre mí</a></li>
+          <li><a href="index.html#experience">Habilidades</a></li>
+          <li><a href="index.html#projects">Proyectos</a></li>
+          <li><a href="index.html#contact">Contacto</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo"><img src="./assets/logotipo.png" alt="Logotipo" /></div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="index.html#about" onclick="toggleMenu()">Acerca de mí</a></li>
+          <li><a href="index.html#experience" onclick="toggleMenu()">Experiencia</a></li>
+          <li><a href="index.html#projects" onclick="toggleMenu()">Proyectos</a></li>
+          <li><a href="index.html#contact" onclick="toggleMenu()">Contacto</a></li>
+        </div>
+      </div>
+    </nav>
+    
+    <section id="project-details">
+      <div class="back-button">
+        <button class="btn btn-color-2" onclick="location.href='index.html#projects'">
+          ← Volver a Proyectos
+        </button>
+      </div>
+      <p class="section__text__p1">Categoría</p>
+      <h1 class="title">Diseño de Producto</h1>
+      
+      <div class="project-content">
+        <div class="project-image">
+          <img src="./assets/project-1.png" alt="Proyecto Diseño de Producto" />
+        </div>
+        <div class="project-description">
+          <h2>Descripción del Proyecto</h2>
+          <p>
+            Aquí puedes agregar una descripción detallada de tus proyectos de Diseño de Producto. 
+            Describe el proceso de diseño, los materiales utilizados, las técnicas de fabricación 
+            y las soluciones innovadoras que desarrollaste.
+          </p>
+          <p>
+            Puedes incluir información sobre investigación, conceptualización, prototipado, 
+            pruebas de usuario y producción final de tus productos.
+          </p>
+        </div>
+      </div>
+      
+      <div class="project-gallery">
+        <h2>Galería</h2>
+        <div class="gallery-container">
+          <!-- Aquí puedes agregar más imágenes de tus proyectos -->
+          <div class="gallery-item">
+            <img src="./assets/project-1.png" alt="Imagen del proyecto 1" />
+            <p>Descripción de la imagen 1</p>
+          </div>
+          <div class="gallery-item">
+            <img src="./assets/project-1.png" alt="Imagen del proyecto 2" />
+            <p>Descripción de la imagen 2</p>
+          </div>
+          <div class="gallery-item">
+            <img src="./assets/project-1.png" alt="Imagen del proyecto 3" />
+            <p>Descripción de la imagen 3</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="index.html#about">Sobre mí</a></li>
+            <li><a href="index.html#experience">Habilidades</a></li>
+            <li><a href="index.html#projects">Proyectos</a></li>
+            <li><a href="index.html#contact">Contacto</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>&#169; 2025 Alexis Posada.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
