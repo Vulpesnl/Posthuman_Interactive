@@ -31,13 +31,20 @@ a, .btn {
 }
 
 /* Desktop Nav */
-nav, .nav-links{
+nav, .nav-links {
     display: flex;
 }
+
 nav {
     justify-content: space-around;
     align-items: center;
     height: 17vh;
+}
+
+.logo img {
+    max-height: 100px;
+    min-height: 90px;
+    width: auto;
 }
 
 .nav-links {
