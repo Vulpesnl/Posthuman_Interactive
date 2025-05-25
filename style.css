@@ -398,10 +398,6 @@ article.icon {
     padding-bottom: 4rem;
 }
 
-.back-button {
-    margin-bottom: 2rem;
-}
-
 .project-content {
     display: flex;
     flex-direction: row;
@@ -486,6 +482,32 @@ article.icon {
     color: #bbb;
     text-decoration: none;
     cursor: pointer;
+}
+
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #f1f1f1;
+    font-size: 60px;
+    font-weight: bold;
+    transition: 0.3s;
+    z-index: 1001;
+    cursor: pointer;
+    user-select: none;
+}
+
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
+
+.nav-btn:hover {
+    color: #9B1D20;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
 .gallery-item {
