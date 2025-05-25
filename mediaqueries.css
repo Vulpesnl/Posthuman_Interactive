@@ -115,4 +115,18 @@
   .text-container {
     text-align: left;
   }
+
+  /* Estilos responsivos para páginas de proyectos */
+  .project-content {
+    flex-direction: column;
+  }
+
+  .project-image {
+    max-width: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  .gallery-container {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
 }
