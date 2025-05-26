@@ -21,13 +21,32 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentGalleryContainer = null;
     
     // Crear un array con todas las imágenes de la galería actual
-    function updateGalleryArray(clickedImage) {
-        // Identificar la galería específica a la que pertenece la imagen en la que se hizo clic
-        currentGalleryContainer = clickedImage.closest('.gallery-container');
-        if (currentGalleryContainer) {
-            galleryArray = Array.from(currentGalleryContainer.querySelectorAll('.gallery-item img'));
-        }
+function updateGalleryArray(clickedImage) {
+    // Identificar la galería específica a la que pertenece la imagen en la que se hizo clic
+    currentGalleryContainer = clickedImage.closest('.gallery-container');
+    if (currentGalleryContainer) {
+        // Obtener todas las imágenes de la galería actual
+        galleryArray = Array.from(currentGalleryContainer.querySelectorAll('.gallery-item img'));
+        
+        // Ordenar las imágenes según su nombre de archivo (para mostrarlas en orden numérico)
+        galleryArray.sort(function(a, b) {
+            const fileNameA = a.src.substring(a.src.lastIndexOf('/') + 1);
+            const fileNameB = b.src.substring(b.src.lastIndexOf('/') + 1);
+            
+            // Extraer números del nombre del archivo si existen
+            const numA = fileNameA.match(/\d+/);
+            const numB = fileNameB.match(/\d+/);
+            
+            // Si ambos tienen números, comparar numéricamente
+            if (numA && numB) {
+                return parseInt(numA[0]) - parseInt(numB[0]);
+            }
+            
+            // Si no, comparar alfabéticamente
+            return fileNameA.localeCompare(fileNameB);
+        });
     }
+}
     
     // Añadir evento click a cada imagen
     galleryImages.forEach(img => {
