@@ -609,3 +609,20 @@ footer  p {
     color: #9B1D20;
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
+/* Estilos para videos en la galería */
+.video-item video {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.video-item video:hover {
+    transform: scale(1.03);
+}
+
+.modal #modalVideo {
+    max-width: 90%;
+    max-height: 90vh;
+}

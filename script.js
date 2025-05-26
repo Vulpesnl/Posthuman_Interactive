@@ -18,20 +18,21 @@ document.addEventListener('DOMContentLoaded', function() {
     const galleryImages = document.querySelectorAll('.gallery-item img');
     let currentImageIndex = 0;
     let galleryArray = [];
+    let currentGalleryContainer = null;
     
     // Crear un array con todas las imágenes de la galería actual
-    function updateGalleryArray() {
-        // Identificar la galería actual basada en la imagen que se hizo clic
-        const currentGallery = document.querySelector('.gallery-container');
-        if (currentGallery) {
-            galleryArray = Array.from(currentGallery.querySelectorAll('.gallery-item img'));
+    function updateGalleryArray(clickedImage) {
+        // Identificar la galería específica a la que pertenece la imagen en la que se hizo clic
+        currentGalleryContainer = clickedImage.closest('.gallery-container');
+        if (currentGalleryContainer) {
+            galleryArray = Array.from(currentGalleryContainer.querySelectorAll('.gallery-item img'));
         }
     }
     
     // Añadir evento click a cada imagen
     galleryImages.forEach(img => {
         img.addEventListener('click', function() {
-            updateGalleryArray();
+            updateGalleryArray(this);
             currentImageIndex = galleryArray.indexOf(this);
             openModal(this.src);
         });
