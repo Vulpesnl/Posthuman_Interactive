@@ -292,6 +292,7 @@
         let angleBig = 0;
         let angleSmall = 0;
         let isMuted = false;
+        let canvas;
 
         p.preload = function () {
           // Ajustar las rutas para que sean relativas al proyecto
@@ -304,9 +305,31 @@
           );
         };
 
+        // Función para redimensionar el canvas cuando cambia el tamaño de la ventana
+        p.windowResized = function() {
+          let container = document.getElementById("blink-void-container");
+          if (container) {
+            p.resizeCanvas(container.offsetWidth, container.offsetHeight);
+          }
+        };
+
+        // Función para manejar el parpadeo
+        function triggerBlink() {
+          if (!isBlinking) {
+            eyelidOpen = false;
+            isBlinking = true;
+            if (!isMuted) {
+              blinkSound.play();
+            }
+            setTimeout(function () {
+              isBlinking = false; // Delay
+            }, 200);
+          }
+        }
+
         p.setup = function () {
           let container = document.getElementById("blink-void-container");
-          let canvas = p.createCanvas(
+          canvas = p.createCanvas(
             container.offsetWidth,
             container.offsetHeight
           );
@@ -318,6 +341,17 @@
               ambientSound.play();
               ambientSound.loop();
             }
+            triggerBlink();
+          });
+
+          // Agregar soporte para eventos táctiles
+          canvas.touchStarted(function() {
+            if (!ambientSound.isPlaying() && !isMuted) {
+              ambientSound.play();
+              ambientSound.loop();
+            }
+            triggerBlink();
+            return false; // Prevenir acciones por defecto
           });
 
           // Configurar el botón de silenciar
@@ -470,6 +504,7 @@
           angleBig += 0.003;
         };
 
+        // Mantener el mouseClicked para compatibilidad con escritorio
         p.mouseClicked = function () {
           // Solo activar el parpadeo si el clic es dentro del canvas
           if (
@@ -478,22 +513,23 @@
             p.mouseY >= 0 &&
             p.mouseY <= p.height
           ) {
-            if (!isBlinking) {
-              eyelidOpen = false;
-              isBlinking = true;
-              if (!isMuted) {
-                blinkSound.play();
-              }
-              setTimeout(function () {
-                isBlinking = false; // Delay
-              }, 200);
-            }
+            triggerBlink();
           }
         };
       };
 
       // Iniciar el sketch de p5.js
       new p5(blinkVoidSketch);
+
+      // Asegurar que el canvas se redimensione cuando cambia el tamaño de la ventana
+      window.addEventListener('resize', function() {
+        // Dar tiempo para que el contenedor se ajuste antes de redimensionar el canvas
+        setTimeout(function() {
+          if (typeof p5 !== 'undefined' && p5.instance) {
+            p5.instance.windowResized();
+          }
+        }, 100);
+      });
     </script>
 
     <!-- Script principal del sitio -->
