@@ -17,7 +17,7 @@
   </head>
   <body style="background-color: #121113">
     <nav id="desktop-nav">
-      <div class="logo"><img src="/assets/logotipo.png" alt="Logotipo" /></div>
+      <div class="logo"><img src="./assets/logotipo.png" alt="Logotipo" /></div>
       <div>
         <ul class="nav-links">
           <li><a href="index.html#about">Sobre mí</a></li>
@@ -28,7 +28,7 @@
       </div>
     </nav>
     <nav id="hamburger-nav">
-      <div class="logo"><img src="/assets/logotipo.png" alt="Logotipo" /></div>
+      <div class="logo"><img src="./assets/logotipo.png" alt="Logotipo" /></div>
       <div class="hamburger-menu">
         <div class="hamburger-icon" onclick="toggleMenu()">
           <span></span>
@@ -124,7 +124,7 @@
       <div class="project-content">
         <div class="project-image">
           <img
-            src="/assets/proyectos/Programación y electrónica/Lotofágos/portada_lotofago.png"
+            src="./assets/proyectos/Programación y electrónica/Lotofágos/portada_lotofago.png"
             alt="Proyecto Lotófago"
           />
         </div>
@@ -142,10 +142,10 @@
             <video
               width="100%"
               controls
-              poster="/assets/proyectos/Programación y electrónica/Lotofágos/1747947593952.jpg"
+              poster="./assets/proyectos/Programación y electrónica/Lotofágos/1747947593952.jpg"
             >
               <source
-                src="/assets/proyectos/Programación y electrónica/Lotofágos/montaje funcionamiento.mp4"
+                src="./assets/proyectos/Programación y electrónica/Lotofágos/montaje funcionamiento.mp4"
                 type="video/mp4"
               />
               Tu navegador no soporta videos HTML5.
@@ -173,42 +173,42 @@
           <!-- Imágenes del proyecto -->
           <div class="gallery-item">
             <img
-              src="/assets/proyectos/Programación y electrónica/Lotofágos/01_montaje_final.jpg"
+              src="./assets/proyectos/Programación y electrónica/Lotofágos/01_montaje_final.jpg"
               alt="Lotófago - Montaje final"
             />
             <p>Montaje final del circuito</p>
           </div>
           <div class="gallery-item">
             <img
-              src="/assets/proyectos/Programación y electrónica/Lotofágos/02_Modulos_arduino.jpg"
+              src="./assets/proyectos/Programación y electrónica/Lotofágos/02_Modulos_arduino.jpg"
               alt="Lotófago - Módulos Arduino"
             />
             <p>Módulos Arduino</p>
           </div>
           <div class="gallery-item">
             <img
-              src="/assets/proyectos/Programación y electrónica/Lotofágos/03_prototipado.jpg"
+              src="./assets/proyectos/Programación y electrónica/Lotofágos/03_prototipado.jpg"
               alt="Lotófago - Prototipado"
             />
             <p>Proceso de prototipado</p>
           </div>
           <div class="gallery-item">
             <img
-              src="/assets/proyectos/Programación y electrónica/Lotofágos/06_diseño_de_tablero_1.jpg"
+              src="./assets/proyectos/Programación y electrónica/Lotofágos/06_diseño_de_tablero_1.jpg"
               alt="Lotófago - Diseño de tablero 1"
             />
             <p>Diseño del tablero - Vista 1</p>
           </div>
           <div class="gallery-item">
             <img
-              src="/assets/proyectos/Programación y electrónica/Lotofágos/07_diseño_de_tablero_2.jpg"
+              src="./assets/proyectos/Programación y electrónica/Lotofágos/07_diseño_de_tablero_2.jpg"
               alt="Lotófago - Diseño de tablero 2"
             />
             <p>Diseño del tablero - Vista 2</p>
           </div>
           <div class="gallery-item">
             <img
-              src="/assets/proyectos/Programación y electrónica/Lotofágos/diagrama.png"
+              src="./assets/proyectos/Programación y electrónica/Lotofágos/diagrama.png"
               alt="Lotófago - Diagrama"
             />
             <p>Diagrama del sistema</p>
@@ -216,11 +216,11 @@
           <!-- Videos del proyecto -->
           <div class="gallery-item video-item">
             <video
-              poster="/assets/proyectos/Programación y electrónica/Lotofágos/04_prototipo.mp4"
+              poster="./assets/proyectos/Programación y electrónica/Lotofágos/04_prototipo.mp4"
               preload="metadata"
             >
               <source
-                src="/assets/proyectos/Programación y electrónica/Lotofágos/04_prototipo.mp4"
+                src="./assets/proyectos/Programación y electrónica/Lotofágos/04_prototipo.mp4"
                 type="video/mp4"
               />
             </video>
@@ -228,11 +228,11 @@
           </div>
           <div class="gallery-item video-item">
             <video
-              poster="/assets/proyectos/Programación y electrónica/Lotofágos/05_luces_rgb.mp4"
+              poster="./assets/proyectos/Programación y electrónica/Lotofágos/05_luces_rgb.mp4"
               preload="metadata"
             >
               <source
-                src="/assets/proyectos/Programación y electrónica/Lotofágos/05_luces_rgb.mp4"
+                src="./assets/proyectos/Programación y electrónica/Lotofágos/05_luces_rgb.mp4"
                 type="video/mp4"
               />
             </video>
@@ -240,11 +240,11 @@
           </div>
           <div class="gallery-item video-item">
             <video
-              poster="/assets/proyectos/Programación y electrónica/Lotofágos/08_modulos_luces.mp4"
+              poster="./assets/proyectos/Programación y electrónica/Lotofágos/08_modulos_luces.mp4"
               preload="metadata"
             >
               <source
-                src="/assets/proyectos/Programación y electrónica/Lotofágos/08_modulos_luces.mp4"
+                src="./assets/proyectos/Programación y electrónica/Lotofágos/08_modulos_luces.mp4"
                 type="video/mp4"
               />
             </video>
@@ -292,7 +292,6 @@
         let angleBig = 0;
         let angleSmall = 0;
         let isMuted = false;
-        let canvas;
 
         p.preload = function () {
           // Ajustar las rutas para que sean relativas al proyecto
@@ -305,31 +304,9 @@
           );
         };
 
-        // Función para redimensionar el canvas cuando cambia el tamaño de la ventana
-        p.windowResized = function() {
-          let container = document.getElementById("blink-void-container");
-          if (container) {
-            p.resizeCanvas(container.offsetWidth, container.offsetHeight);
-          }
-        };
-
-        // Función para manejar el parpadeo
-        function triggerBlink() {
-          if (!isBlinking) {
-            eyelidOpen = false;
-            isBlinking = true;
-            if (!isMuted) {
-              blinkSound.play();
-            }
-            setTimeout(function () {
-              isBlinking = false; // Delay
-            }, 200);
-          }
-        }
-
         p.setup = function () {
           let container = document.getElementById("blink-void-container");
-          canvas = p.createCanvas(
+          let canvas = p.createCanvas(
             container.offsetWidth,
             container.offsetHeight
           );
@@ -341,17 +318,6 @@
               ambientSound.play();
               ambientSound.loop();
             }
-            triggerBlink();
-          });
-
-          // Agregar soporte para eventos táctiles
-          canvas.touchStarted(function() {
-            if (!ambientSound.isPlaying() && !isMuted) {
-              ambientSound.play();
-              ambientSound.loop();
-            }
-            triggerBlink();
-            return false; // Prevenir acciones por defecto
           });
 
           // Configurar el botón de silenciar
@@ -504,7 +470,6 @@
           angleBig += 0.003;
         };
 
-        // Mantener el mouseClicked para compatibilidad con escritorio
         p.mouseClicked = function () {
           // Solo activar el parpadeo si el clic es dentro del canvas
           if (
@@ -513,23 +478,22 @@
             p.mouseY >= 0 &&
             p.mouseY <= p.height
           ) {
-            triggerBlink();
+            if (!isBlinking) {
+              eyelidOpen = false;
+              isBlinking = true;
+              if (!isMuted) {
+                blinkSound.play();
+              }
+              setTimeout(function () {
+                isBlinking = false; // Delay
+              }, 200);
+            }
           }
         };
       };
 
       // Iniciar el sketch de p5.js
       new p5(blinkVoidSketch);
-
-      // Asegurar que el canvas se redimensione cuando cambia el tamaño de la ventana
-      window.addEventListener('resize', function() {
-        // Dar tiempo para que el contenedor se ajuste antes de redimensionar el canvas
-        setTimeout(function() {
-          if (typeof p5 !== 'undefined' && p5.instance) {
-            p5.instance.windowResized();
-          }
-        }, 100);
-      });
     </script>
 
     <!-- Script principal del sitio -->
